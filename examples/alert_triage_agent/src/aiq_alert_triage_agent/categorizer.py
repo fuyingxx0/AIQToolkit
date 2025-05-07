@@ -56,7 +56,8 @@ async def categorizer_tool(config: CategorizerToolConfig, builder: Builder):
         # - Add newlines before and after section
         # - Use extracted heading level for consistency
         # - Add extra newline between category and reasoning for readability
-        report_section = f"""\n\n{pound_signs} Root Cause Category\n{result.content.replace('\n', '\n\n')}"""
+        formatted_content = result.content.replace('\n', '\n\n')
+        report_section = f"\n\n{pound_signs} Root Cause Category\n{formatted_content}"
 
         # Log the result for tracking
         utils.logger.debug(result.content)
