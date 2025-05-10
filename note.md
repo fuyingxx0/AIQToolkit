@@ -2,6 +2,7 @@
 ### download uv
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ### start virtual machine
+uv pip install langgraph
 uv venv --seed .venv
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 . .venv\Scripts\Activate.ps1

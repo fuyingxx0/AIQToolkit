@@ -11,6 +11,13 @@ general:
   front_end:
     _type: console
 
+llms:
+  nim_llm:
+    _type: nim
+    model_name: meta/llama-3.1-70b-instruct
+    temperature: 0.0
+
 workflow:
   _type: my_pace
   parameter: default_value
+  llm_name: nim_llm
